@@ -39,8 +39,8 @@ header{
     transform: rotate(180deg);
 }
 .flags img{
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
 }
 .flags .az i{
     color: #fff;
@@ -159,8 +159,11 @@ nav .custom-dropdown{
     border-top:2px solid rgba(0,0,0,0.08);
     border-bottom:2px solid rgba(0,0,0,0.08);
 }
+.custom{
+    margin-left: 62px;
+}
 nav .custom2{
-    padding-left: 450px;
+    padding-left: 485px;
 }
 nav .custom-dropdown li, nav .custom-dropdown2 li{
     margin: 0 0 15px 0;
@@ -202,7 +205,6 @@ nav .custom-dropdown li, nav .custom-dropdown2 li{
 .swiper-slide img {
     width: 40%;
     height: 50% ;
-    border-radius:50%;
     object-fit: contain;
 }
 .carousel-text{
@@ -363,7 +365,7 @@ nav .custom-dropdown li, nav .custom-dropdown2 li{
     border-radius: 8px;
     height: 34px;
     width: 34px;
-    margin: .4rem .75rem .87rem 1rem;
+    margin: .4rem .75rem .9rem 1rem;
     font-size: 16px;
     display: flex;
     justify-content: center ;
@@ -1099,6 +1101,17 @@ footer ul li a:hover{
     .solution-box.col-sm-6 {
         flex: 0 0 auto;
         width: 80%;
+    }
+    .swiper-slide-active .carousel-text{
+        width: 100%;
+        padding: 0 20px;
+        left: 0;
+    }
+    .slide-wrapper{
+        padding-left: 20px;
+    }
+    .swiper-slide img{
+        width: 70%;
     }
 }
 @media (max-width:375px){
