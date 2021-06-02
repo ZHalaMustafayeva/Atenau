@@ -1,5 +1,8 @@
 
 $(document).ready(function () {
+
+    // Carousel
+
     var swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,
         effect: "fade",
@@ -9,6 +12,9 @@ $(document).ready(function () {
             prevEl: ".swiper-button-prev",
         }
     });
+
+    // project carousel
+
     $('.owl-carousel').owlCarousel({
         items: 4,
         loop: false,
@@ -32,6 +38,9 @@ $(document).ready(function () {
             }
         }
     });
+
+    // scroll navbar
+    
     $(window).bind('scroll', function () {
 
         var navHeight = $('nav').height()
@@ -42,6 +51,9 @@ $(document).ready(function () {
             $('.logo').removeClass('fixed');
         }
     });
+
+    // hanburger menu
+
     $('.humb').click(function () {
         $('.humb').toggleClass('active-humb');
         if ($('.humb').hasClass('active-humb')) {
@@ -53,23 +65,23 @@ $(document).ready(function () {
             });
         }
         else {
-
-
-
             $('.mobile-nav').css({
                 transform: 'translateY(-200%)',
                 transition: '.5s'
             });
-
         }
     })
+
+    // responsive dropdown
+
     $('.open2').click(function () {
         $('.custom-dropdown2').slideToggle();
     })
     $('.open1').click(function () {
         $('.custom-dropdown1').slideToggle();
     })
-  
+
+        // project slider
 
     var offset = $('.heading').offset();
     $('.owl-carousel .owl-stage').css({
