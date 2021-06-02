@@ -656,8 +656,6 @@ footer ul li a:hover{
 .sub-logo img{
     margin-right: 15px;
     width: 150px;
-    filter: grayscale(100);
-    opacity: .8;
 }
 .sub-left,.sub-right{
     width: 50%;
