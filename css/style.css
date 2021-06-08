@@ -31,7 +31,8 @@ header{
     z-index: 2;
 }
 .flags{
-    margin-left: 50px;
+    margin-left: 20px;
+    cursor: pointer;
 }
 .flags:hover .mix{
     opacity: 1;
@@ -41,11 +42,14 @@ header{
     transform: rotate(180deg);
 }
 .flags img{
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
+}
+.flags .az{
+    margin-right: 10px;
 }
 .flags .az i{
-    color: #fff;
+    font-size: 14px;
     transition: .3s;
 }
 .mix{
@@ -54,7 +58,7 @@ header{
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    top: 36px;
+    top: 100%;
     z-index: 2;
     background-color: #fff;
     transition: .3s;
@@ -101,6 +105,7 @@ nav>.container{
 }
 .nav-icons{
     display: flex;
+    align-items: center;
 }
 .nav-icons div i{
     font-size: 20px;
@@ -115,6 +120,23 @@ nav>.container{
 .nav-list li a{
     padding:18px;
     color: #000;
+    position: relative;
+}
+.nav-list>li>a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #e50007;
+    margin: 0px auto;
+    position: absolute;
+    bottom: 5px;
+    transition: 0.3s;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.nav-list li:hover a::after{
+    width: 40px;
 }
 .list-wrapper{
     display: flex;
@@ -123,16 +145,11 @@ nav>.container{
     justify-content: space-between;
 }
 .logo{
-    background-color: rgb(202, 5, 5);
-    padding: 52px 0px;
-    margin-bottom: -110px;
-    margin-top: -30px;
+    background-color: #fff;
     z-index: 348569458;
 }
 .logo img{
-    max-width: 150px;
-    filter: grayscale(100)brightness(100);
-    padding: 9px;
+    max-width: 170px;
 }
 nav .custom-dropdown{
     width: 100%;
@@ -155,10 +172,10 @@ nav .custom-dropdown{
     border-bottom:2px solid rgba(0,0,0,0.08);
 }
 .custom{
-    margin-left: 62px;
+    margin-left:-80px;
 }
 nav .custom2{
-    padding-left: 485px;
+    padding-left: 357px;
 }
 nav .custom-dropdown li, nav .custom-dropdown2 li{
     margin: 0 0 15px 0;
@@ -237,15 +254,21 @@ nav .custom-dropdown li, nav .custom-dropdown2 li{
     animation: anim 1.5s ease forwards;
 }
 .carousel-text h3, .carousel-text h4{
-    font-size: 30px;
+    font-size: 34px;
 }
-.carousel-text p{
-   color: rgb(202, 5, 5);
-   padding-top: 53px;
-   font-size: 16px;
-   font-weight: 400;
+.carousel-text a{
+    padding: 11px 57px;
+    background-color: rgb(202, 5, 5);
+    border-radius: 24px;
+    box-shadow: rgb(202, 5, 5) 0px 4px 8px;
+    color: #fff;
+    transition: .3s;
+    width: auto;
+    display: inline-block;
+    height: 48px;
+    margin-top: 35px;
+}
 
-}
 
     /* SOLUTİONS */
 
@@ -263,7 +286,6 @@ nav .custom-dropdown li, nav .custom-dropdown2 li{
     align-items: center;
 }
 .solution-box{
-    background-image: url('../img/solution.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     padding: 40px;     
@@ -275,6 +297,21 @@ nav .custom-dropdown li, nav .custom-dropdown2 li{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.box1{
+    background-image: url('../img/design2.jpeg');
+}
+.box2{
+    background-image: url('../img/production2.jpeg');
+}
+.box3{
+    background-image: url('../img/installation.jpeg');
+}
+.box4{
+    background-image: url('../img/sales.jpeg');
+}
+.box5{
+    background-image: url('../img/services.jpeg');
 }
 .solution-box a{
     display: block;
@@ -441,6 +478,7 @@ nav .custom-dropdown li, nav .custom-dropdown2 li{
     background-color: #fff;
     line-height: 1;
 }
+
 .owl-prev, .owl-next{
     position: absolute;
     left: 19%;
@@ -503,7 +541,7 @@ nav .custom-dropdown li, nav .custom-dropdown2 li{
 }
 #referans img{
     width: 100%;
-    padding: 60px 35px;
+    padding: 15px 20px;
 }
 .ref-items h4{
     text-align: center;
@@ -571,7 +609,7 @@ nav .custom-dropdown li, nav .custom-dropdown2 li{
 .call-img:hover img{
     transform: translateY(25px);
 }
-.call-btns a:first-child, .call-btns a:last-child{
+.call-btns a:first-child, .call-btns button{
     width: 160px;
     height: 50px;
     display: flex;
@@ -588,13 +626,13 @@ nav .custom-dropdown li, nav .custom-dropdown2 li{
     border: none;
     animation: btn 4s ease infinite;    
 }
-.call-btns a:last-child{
+.call-btns button{
     color: #454749;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.14);
     transition: .2s;
 }
-.call-btns a:last-child:hover{
+.call-btns button:hover{
     border-color: #FF8C00;
     color: #FF8C00;
 }
@@ -696,6 +734,55 @@ footer ul li a:hover{
     width: 100px;
     height: 24px;
 }
+
+     /* Modal section */
+     .modal-content{
+        height: 674px;
+    }
+    .modal-body{
+        padding: 30px 60px 0 60px;
+        border-radius: 10px;
+    }
+    .modal-header{
+        border:none;
+        padding: 1rem 0 !important;
+    }
+    .modal-body form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .modal-title{
+        font-weight: 400;
+    }
+    .close {
+       font-weight: 400;
+       outline: none !important;
+       border:none;
+       background-color: transparent;
+    }
+    .modal-body form input, .modal-body form textarea{
+        width: 100%;
+        border: 1px solid #e6ecf2 !important;
+        padding: 12px 20px;
+        border-radius: 4px !important;
+        font-size: 14px !important;
+        outline: none;
+        transition: all .3s ease;
+        padding: 12px ;
+        margin: 15px 0;
+    }
+    textarea{
+        height: 160px;
+    }
+    ::placeholder{
+        color: rgb(179, 176, 176);
+    }
+    [type="submit"]{
+        background-color: #2d2961;
+        color: #fff;
+    }
 @keyframes btn{
     0% {
         -webkit-box-shadow: 0 0 0 0 rgb(100 178 97 / 20%);
@@ -752,7 +839,10 @@ footer ul li a:hover{
         width: 100px;
         height: 100px;
     }
-    .call-btns a:first-child, .call-btns a:last-child {
+    /* .owl-stage{
+        margin-left:-379px;
+    } */
+    .call-btns a:first-child, .call-btns button{
         width: 130px;
         height: 42px;
     }
@@ -955,7 +1045,7 @@ footer ul li a:hover{
         margin-right: 0;
         margin-bottom: 10px;
     }
-    .call-btns a:last-child{
+    .call-btns button{
         width: 160px;
         padding: 15px 25px;
         line-height: 1;
@@ -1072,7 +1162,7 @@ footer ul li a:hover{
     .ref-item {
         margin: 0 auto;
     }
-    .call-btns a:first-child, .call-btns a:last-child{
+    .call-btns a:first-child, .call-btns button{
         width: 100%;
     }
     footer{
